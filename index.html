@@ -1,64 +1,156 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
     <link rel="stylesheet" href="index.css">
     <title>Portifolio</title>
 </head>
+
 <body>
-    
+
     <header>
         <nav>
-            <img class="Img-Logo" src="Imgs/Logo.png" alt="Img Logo">          
+            <a href="#Home"><img class="Img-Logo" src="Imgs/Logo.png" alt="Img Logo"></a>
             <ul class="Nav-Menu">
-                <li>Sobre</li>
-                <li>Cerfiticados</li>
-                <li>Projetos</li>
-                <li>Skills</li>
-            </ul>            
-            <i class="ri-align-justify"></i>
+                <li><a href="#Sobre" class="Btn">Sobre</a></li>
+                <li><a href="#Certificados" class="Btn">Cerfiticados</a></li>
+                <li><a href="#Projetos" class="Btn">Projetos</a></li>
+                <li><a href="#Skills" class="Btn">Skills</a></li>
+            </ul>
+
+            <i id="menu-icon" class="ri-align-justify"></i>
+
+            <div id="Nav-Hide" class="Nav-Hide">
+                <ul class="Nav-Menu-Hide">
+                    <li><a href="#Sobre" class="Btn">Sobre</a></li>
+                    <li><a href="#Certificados" class="Btn">Cerfiticados</a></li>
+                    <li><a href="#Projetos" class="Btn">Projetos</a></li>
+                    <li><a href="#Skills" class="Btn">Skills</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
-    
+
+    <Script>
+        var navHide = document.getElementById("Nav-Hide");
+        var menuicon = document.getElementById("menu-icon");
+
+        menuicon.onclick = function () {
+            navHide.classList.toggle("open");
+
+        };
+    </Script>
+
     <main>
         <section id="Home" class="Bloco Home">
-            <div>
-
+            <img class="Img-Pablo" src="Imgs/Foto_Perfil.png" alt="Img-Pablo">
+            <div class="Text-Pablo">
+                <h1>Pablo Redig</h1>
+                <h3>Desenvolvedor Front-End</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur maiores,
+                    dolorem veritatis vel deleniti, facere aperiam facilis, ipsa labore laudantium commodi.
+                    Ipsa sequi at dolores amet rerum, impedit repudiandae odio.
+                </p>
             </div>
         </section>
 
         <section id="Sobre" class="Bloco Sobre">
-            <div>
+            <div class="divisoria"><span>Sobre</span></div>
 
+            <div class="BlocoSobre">
+                <h3>Contatos</h3>
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eligendi nisi, veniam reprehenderit ea omnis voluptas illo earum odit a dicta reiciendis
+                    in nemo iusto. Magni culpa ullam molestiae. Ea, odit.
+                </span>
+            </div>
+            <div class="BlocoSobre">
+                <h3>Formação</h3>
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eligendi nisi, veniam reprehenderit ea omnis voluptas illo earum odit a dicta reiciendis
+                    in nemo iusto. Magni culpa ullam molestiae. Ea, odit.
+                </span>
+            </div>
+            <div class="BlocoSobre">
+                <h3>Interesse</h3>
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eligendi nisi, veniam reprehenderit ea omnis voluptas illo earum odit a dicta reiciendis
+                    in nemo iusto. Magni culpa ullam molestiae. Ea, odit.
+                </span>
             </div>
         </section>
 
-        
         <section id="Certificados" class="Bloco Certificados">
-            <div>
+            <div class="divisoria"><span>Certificados</span></div>
 
+            <div class="Bloco-Pequeno">
+                <span><b>Certificado de Bacharel</b></span>
+                <span><b>Curso:</b> Sistem de Informação</span>
+                <span><b>Data de conclusão:</b> 16/08/2022</span>
+                <button class="Btn-Visualizar">Visualizar</button>
+            </div>
+            <div class="Bloco-Pequeno">
+                <span><b>Certificado de Bacharel</b></span>
+                <span><b>Curso:</b> Sistem de Informação</span>
+                <span><b>Data de conclusão:</b> 16/08/2022</span>
+                <button class="Btn-Visualizar">Visualizar</button>
+            </div>
+            <div class="Bloco-Pequeno">
+                <span><b>Certificado de Bacharel</b></span>
+                <span><b>Curso:</b> Sistem de Informação</span>
+                <span><b>Data de conclusão:</b> 16/08/2022</span>
+                <button class="Btn-Visualizar">Visualizar</button>
             </div>
         </section>
 
         <section id="Projetos" class="Bloco Projetos">
-            <div>
+            <div class="divisoria"><span>Projetos</span></div>
 
+            <div class="Bloco-Pequeno">
+                <span>Projeto - </span>
+                <span>Ferramentas Utilizadas:</span>
+            </div>
+            <div class="Bloco-Pequeno">
+                <span>Projeto - </span>
+                <span>Ferramentas Utilizadas:</span>
+            </div>
+            <div class="Bloco-Pequeno">
+                <span>Projeto - </span>
+                <span>Ferramentas Utilizadas:</span>
             </div>
         </section>
-        
-        <section id="Skills" class="Bloco Skills">
-            <div>
 
+        <section id="Skills" class="Bloco Skills">
+            <div class="divisoria"><span>Skills</span></div>
+
+            <div class="Bloco-Pequeno">
+                <span>Certificado</span>
+                <img src="" alt="Img Skills">                
+            </div>
+            <div class="Bloco-Pequeno">
+                <span>Certificado</span>
+                <img src="" alt="Img Skills">                
+            </div>
+            <div class="Bloco-Pequeno">
+                <span>Certificado</span>
+                <img src="" alt="Img Skills">                
             </div>
         </section>
     </main>
-    
+
     <footer>
 
     </footer>
 
 </body>
+
 </html>
