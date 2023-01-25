@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-
     <link rel="stylesheet" href="index.css">
+    <script src="js/scripts.js" defer></script>
     <title>Portifolio</title>
 </head>
 
@@ -36,16 +36,6 @@
         </nav>
     </header>
 
-    <Script>
-        var navHide = document.getElementById("Nav-Hide");
-        var menuicon = document.getElementById("menu-icon");
-
-        menuicon.onclick = function () {
-            navHide.classList.toggle("open");
-
-        };
-    </Script>
-
     <main>
         <section id="Home" class="Bloco Home">
             <img class="Img-Pablo" src="Imgs/Foto_Perfil.png" alt="Img-Pablo">
@@ -57,20 +47,17 @@
                     dolorem veritatis vel deleniti, facere aperiam facilis, ipsa labore laudantium commodi.
                     Ipsa sequi at dolores amet rerum, impedit repudiandae odio.
                 </p>
+                <div class="Contatos">
+                    <a href="https://github.com/PabloRedig" target="_blank"><i class="ri-github-fill"></i></a>
+                    <a href="https://www.linkedin.com/in/pabloredig/" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+                    <a href="https://contate.me/pabloredig" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                </div>
             </div>
         </section>
 
         <section id="Sobre" class="Bloco Sobre">
             <div class="divisoria"><span>Sobre</span></div>
 
-            <div class="BlocoSobre">
-                <h3>Contatos</h3>
-                <span>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Eligendi nisi, veniam reprehenderit ea omnis voluptas illo earum odit a dicta reiciendis
-                    in nemo iusto. Magni culpa ullam molestiae. Ea, odit.
-                </span>
-            </div>
             <div class="BlocoSobre">
                 <h3>Formação</h3>
                 <span>
@@ -87,6 +74,14 @@
                     in nemo iusto. Magni culpa ullam molestiae. Ea, odit.
                 </span>
             </div>
+            <div class="BlocoSobre">
+                <h3>Experiencias</h3>
+                <span>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                    Eligendi nisi, veniam reprehenderit ea omnis voluptas illo earum odit a dicta reiciendis
+                    in nemo iusto. Magni culpa ullam molestiae. Ea, odit.
+                </span>
+            </div>
         </section>
 
         <section id="Certificados" class="Bloco Certificados">
@@ -95,21 +90,23 @@
                 <div class="Bloco-Caixa">
                     <span><b>Certificado de Bacharel</b></span>
                     <img src="Imgs/LogoEstacio.png" alt="Img-Certificado">
-                    <a class="Botao" href="">Visualizar</a>
-                </div>
-
-                <div class="Bloco-Caixa">
-                    <span><b>Certificado</b></span>
-                    <img src="" alt="Img-Certificado">
-                    <a class="Botao" href="">Visualizar</a>
-                </div>
-
-                <div class="Bloco-Caixa">
-                    <span><b>Certificado</b></span>
-                    <img src="" alt="Img-Certificado">
-                    <a class="Botao" href="">Visualizar</a>
+                    <a id="open-modal" class="Botao">Visualizar</a>
                 </div>
             </div>
+
+            <div id="fade" class="hide"></div>
+            <div id="modal" class="hide">
+                <div class="modal-header">
+                    <h2>Bacharel em Sistema de informação</h2>
+                    <i id="close-modal" class="ri-close-circle-line"></i>
+                </div>
+                <div class="modal-body">
+                    <img class="Img-Diploma" src="Imgs/DiplomaEstacio.png" alt="Img-Certificado">
+                </div>
+            </div>
+
+
+
         </section>
 
         <section id="Projetos" class="Bloco Projetos">
@@ -119,19 +116,13 @@
                 <div class="Bloco-Caixa">
                     <span><b>Projeto Agro Rural</b></span>
                     <img src="Imgs/LogoAgroRural.png" alt="Img-Projeto">
-                    <a class="Botao" href="https://github.com/tccwebrural/agrorural-web">GitHub</a>
+                    <a class="Botao" href="https://github.com/tccwebrural/agrorural-web" target="_blank" >GitHub</a>
                 </div>
 
                 <div class="Bloco-Caixa">
                     <span><b>Projeto Portifolio</b></span>
-                    <img src="Imgs/" alt="Img-Projeto">
-                    <a class="Botao" href="https://github.com/PabloRedig/site-Portifolio">GitHub</a>
-                </div>
-
-                <div class="Bloco-Caixa">
-                    <span><b>Projeto Em produção</b></span>
                     <img src="" alt="Img-Projeto">
-                    <a class="Botao" href="">GitHub</a>
+                    <a class="Botao" href="https://github.com/PabloRedig/site-Portifolio" target="_blank">GitHub</a>
                 </div>
             </div>
         </section>
@@ -168,6 +159,30 @@
             <i class="ri-copyright-line">CopyRight 2023</i>
         </div>
     </footer>
+
+    <Script>
+        var navHide = document.getElementById("Nav-Hide");
+        var menuicon = document.getElementById("menu-icon");
+
+        menuicon.onclick = function () {
+            navHide.classList.toggle("open");
+        }
+
+        const openModalButton = document.querySelector("#open-modal");
+        const closeModalButton = document.querySelector("#close-modal");
+        const modal = document.querySelector("#modal");
+        const fade = document.querySelector("#fade");
+
+        const toggleModal = () => {
+            modal.classList.toggle("hide");
+            fade.classList.toggle("hide");
+        };
+
+        [openModalButton, closeModalButton, fade].forEach((el) => {
+            el.addEventListener("click", () => toggleModal());
+        })
+    </Script>
+
 
 </body>
 

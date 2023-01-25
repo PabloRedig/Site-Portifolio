@@ -23,7 +23,9 @@ body{
     background-color: var(--Color-Secundaria);
 }
 
+/*************************/
 /* Cabeçalho */
+
 header{
     width: 100%;
     height: 8vh;
@@ -66,9 +68,8 @@ nav{
 .Nav-Hide{
     display: none;
 }
-/* Cabeçalho */
-/* Corpo */
 
+/*Global Corpo*/
 main{
     max-width: 80vw;
     height: auto;
@@ -105,7 +106,41 @@ main{
     font-weight: 600;
     background-color: var(--Color-Secundaria);
 }
+
+.Bloco-Caixa{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+
+    width: 250px;
+    height: 200px;
+    padding: 10px;
+    
+    border-radius: .49rem;
+    box-shadow: 2px 2px 2px 1px #888;
+    background-color: var(--Color-Blocos);
+}
+
+.Bloco-Info{
+    display: flex;
+    margin: auto;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.Botao{
+    text-align: center;
+    padding: 5px;
+    border-radius: .49rem;
+    border: none;
+    color: white;
+    cursor: pointer;
+    background-color: var(--Color-Principal);
+}
+
 /* Home */
+
 .Home{
     margin: auto;
     align-items: center;
@@ -126,15 +161,32 @@ main{
     background-color: var(--Color-Blocos);
 }
 
+.Contatos{
+    font-size: 25px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.Contatos a{
+    color: black;
+}
+
+.Contatos i:hover{
+    border-radius: 50rem;
+    transition: all .50s ease;
+    color: white;
+    cursor: pointer;
+    background-color: var(--Color-Principal);
+
+}
+
 .Text-Pablo p{
     margin: 10px 0;
 }
-/* Home */
 
 /* Sobre */
-.Sobre{
-    display: flex;
-}
+
 .BlocoSobre{    
     max-width: 80%;
     height: auto;
@@ -146,41 +198,78 @@ main{
     border-radius: .49rem;
     background-color: var(--Color-Blocos);
 }
-/* Sobre */
 
 /*Certificados*/
+/*Modal*/
 
-.Bloco-Info{
-    display: flex;
-    flex-direction: row;
-    margin:  2% auto;
-    gap: 20px;
-    flex-wrap: wrap;
-}
 
-.Bloco-Caixa{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 250px;
-    height: 200px;
-    padding: 10px;
-    border-radius: .49rem;
-    box-shadow: 2px 2px 2px 1px #888;
-    background-color: var(--Color-Blocos)
-}
 
-.Botao{
-    text-align: center;
-    padding: 5px;
-    border-radius: .49rem;
-    border: none;
-    color: white;
-    cursor: pointer;
+#close-modal{
+    padding: .6rem 1.2rem;
     background-color: var(--Color-Principal);
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
 }
 
-/*Certificados*/
+#fade, 
+#modal{
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#fade{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+}
+
+#modal{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:  #fff;
+    z-index: 10;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+}
+
+.modal-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+}
+
+.modal-body p{
+    margin-bottom: 1rem;
+}
+
+.Img-Diploma{
+    width: 600px;
+}
+
+#modal.hide,
+#fade.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+/*Modal*/
+
+
+/*Skills*/
 
 .Img{
     max-width: 150px;    
@@ -191,7 +280,6 @@ main{
 .Skills span{
     align-self: center;
 }
-
 
 /* Roda Pé */
 
@@ -204,17 +292,14 @@ footer{
 .roda-pe{
     display: flex;
     justify-content: center;
-    padding: 3px;
     color: white;
 }
 
-/* Roda Pé */
-
 /* Reponsividade */
-
-@media screen and (max-width: 590px){
+@media screen and (max-width: 700px){
    
     /* Header */
+    
     .Nav-Menu{
         display: none;
     }
@@ -249,21 +334,29 @@ footer{
     .Nav-Hide.open{
         right: 0px;
     }
-    /* Header */
 
-    /* Corpo */
+    /* Header */
+/*************************/
+    /* CORPO */    
+/*************************/
     /* Home */
+
     .Home{
-        flex-direction: column;        
+        flex-direction: column;    
+        gap: 10px;  
+        margin-bottom: 10%;
     }
 
     .Img-Pablo{
         position: static;
     }
+    
     .Text-Pablo{
         width: 80%;
     }
+
     /* Home */
+/*************************/
     /* Certificados */
 
     .Bloco-Info{
@@ -280,4 +373,12 @@ footer{
         display: block;
     }
 
+    /*modal certificado*/
+    .Img-Diploma{
+        width: 300px;
+    }
+    
+
+    /* Certificados */
+/*************************/   
 }
