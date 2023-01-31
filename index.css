@@ -21,6 +21,7 @@ html{
 
 body{
     background-color: var(--Color-Secundaria);
+    font-family: 'Libre Baskerville', serif;
 }
 
 /*************************/
@@ -48,11 +49,14 @@ nav{
     max-width: 100px;
 }
 
-.Nav-Menu{
+.Nav-Hide{
     display: flex;
-    flex-direction: row;
+}
+
+.Nav-Menu-Hide{
+    display: flex;
     gap: 30px;
-    align-self: center;
+    align-items: center;
 }
 
 .Btn {
@@ -65,9 +69,7 @@ nav{
     display: none;
 }
 
-.Nav-Hide{
-    display: none;
-}
+
 
 /*Global Corpo*/
 main{
@@ -91,8 +93,8 @@ main{
     height: 2px;
     border-radius: .49rem;
     margin: auto;
-    margin-top: 1%;
-    margin-bottom: 3%;
+    margin-top: 3%;
+    margin-bottom: 5%;
     display: flex;
     align-items: center;
     color: black;
@@ -102,7 +104,9 @@ main{
 .divisoria span {
     padding: 5px;
     margin-left: 5%;
-    font-size: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--Color-Principal);
     font-weight: 600;
     background-color: var(--Color-Secundaria);
 }
@@ -122,6 +126,11 @@ main{
     background-color: var(--Color-Blocos);
 }
 
+.Bloco-Caixa span{
+    color: var(--Color-Principal);    
+    font-size: 20px;
+    font-weight: 600;
+}
 .Bloco-Info{
     display: flex;
     margin: auto;
@@ -137,6 +146,11 @@ main{
     color: white;
     cursor: pointer;
     background-color: var(--Color-Principal);
+}
+
+h1, h3{
+    color: var(--Color-Principal);
+    font-weight: 600;
 }
 
 /* Home */
@@ -268,6 +282,13 @@ main{
 }
 /*Modal*/
 
+/* Projetos */
+
+.Botoes{
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
 
 /*Skills*/
 
@@ -284,16 +305,16 @@ main{
 /* Roda Pé */
 
 footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 4vh;  
+    color: white;
     background-color: var(--Color-Principal);
 }
 
-.roda-pe{
-    display: flex;
-    justify-content: center;
-    color: white;
-}
+
 
 /* Reponsividade */
 @media screen and (max-width: 700px){
@@ -310,6 +331,7 @@ footer{
         font-size: 28px;
         align-self: center;
     }
+
 
     .Nav-Hide{
         display: flex;

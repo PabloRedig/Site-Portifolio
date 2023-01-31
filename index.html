@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <script src="js/scripts.js" defer></script>
     <title>Portifolio</title>
 </head>
@@ -16,15 +19,7 @@
     <header>
         <nav>
             <a href="#Home"><img class="Img-Logo" src="Imgs/Logo.png" alt="Img Logo"></a>
-            <ul class="Nav-Menu">
-                <li><a href="#Sobre" class="Btn">Sobre</a></li>
-                <li><a href="#Certificados" class="Btn">Cerfiticados</a></li>
-                <li><a href="#Projetos" class="Btn">Projetos</a></li>
-                <li><a href="#Skills" class="Btn">Skills</a></li>
-            </ul>
-
             <i id="menu-icon" class="ri-align-justify"></i>
-
             <div id="Nav-Hide" class="Nav-Hide">
                 <ul class="Nav-Menu-Hide">
                     <li><a href="#Sobre" class="Btn">Sobre</a></li>
@@ -43,15 +38,17 @@
                 <h1>Pablo Redig</h1>
                 <h3>Desenvolvedor Front-End</h3>
                 <p>
-                    Me chamo Pablo, tenho 23 anos, atualmente moro em Armação dos Buzios/RJ, 
-                    me formei na Universidade Estacio de sá, no curso de Sistema de Informações, 
-                    cursei durante 4 anos e meio, estou em busca de oportunidades na area em que me identifico, 
-                    Desenvolvimento Web, no momento estou estudando sobre React, pretendo me especializar nesse frameWork,
+                    Me chamo Pablo, tenho 23 anos, atualmente moro em Armação dos Buzios/RJ,
+                    me formei na Universidade Estacio de sá, no curso de Sistema de Informações,
+                    cursei durante 4 anos e meio, estou em busca de oportunidades na area em que me identifico,
+                    Desenvolvimento Web, no momento estou estudando sobre React, pretendo me especializar nesse
+                    frameWork,
                     com o conhecimento em que eu adquirir durante a faculdade, me sinto apto a novos desafios, (...)
                 </p>
                 <div class="Contatos">
                     <a href="https://github.com/PabloRedig" target="_blank"><i class="ri-github-fill"></i></a>
-                    <a href="https://www.linkedin.com/in/pabloredig/" target="_blank"><i class="ri-linkedin-box-line"></i></a>
+                    <a href="https://www.linkedin.com/in/pabloredig/" target="_blank"><i
+                            class="ri-linkedin-box-line"></i></a>
                     <a href="https://contate.me/pabloredig" target="_blank"><i class="ri-whatsapp-line"></i></a>
                 </div>
             </div>
@@ -63,16 +60,16 @@
             <div class="BlocoSobre">
                 <h3>Formação</h3>
                 <span>
-                   Sou formado na Universidade Estacio de Sá, campos de Cabo-Frio,
-                   no curso de Sistema de informação, iniciei o curso no ano de 2018.1 e conclui no ano de 2022.1,
-                   para a conclusao do meu curso, Criei junto ao grupo de TCC, um site (AgroRural),
-                   o mesmo era voltado para ajudar os agropecuarios no controle de seus gados.
+                    Sou formado na Universidade Estacio de Sá, campos de Cabo-Frio,
+                    no curso de Sistema de informação, iniciei o curso no ano de 2018.1 e conclui no ano de 2022.1,
+                    para a conclusao do meu curso, Criei junto ao grupo de TCC, um site (AgroRural),
+                    o mesmo era voltado para ajudar os agropecuarios no controle de seus gados.
                 </span>
             </div>
             <div class="BlocoSobre">
                 <h3>Interesse</h3>
                 <span>
-                    Tenho Interesse em aperfeiçoar o meu conhecimento de front-end, 
+                    Tenho Interesse em aperfeiçoar o meu conhecimento de front-end,
                     conhecer novos meio de criações de Paginas web com design modernos e minimalistas
                 </span>
             </div>
@@ -117,13 +114,19 @@
                 <div class="Bloco-Caixa">
                     <span><b>Projeto Agro Rural</b></span>
                     <img src="Imgs/LogoAgroRural.png" alt="Img-Projeto">
-                    <a class="Botao" href="https://github.com/tccwebrural/agrorural-web" target="_blank" >GitHub</a>
+                    <div class="Botoes">
+                        <a class="Botao" href="https://github.com/tccwebrural/agrorural-web" target="_blank">GitHub</a>
+                        <a id="open-modal-Projeto" class="Botao">Sobre</a>
+                    </div>
                 </div>
 
                 <div class="Bloco-Caixa">
                     <span><b>Projeto Portifolio</b></span>
                     <img src="" alt="Img-Projeto">
-                    <a class="Botao" href="https://github.com/PabloRedig/site-Portifolio" target="_blank">GitHub</a>
+                    <div class="Botoes">
+                        <a class="Botao" href="https://github.com/PabloRedig/site-Portifolio" target="_blank">GitHub</a>
+                        <a class="Botao">Sobre</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -156,9 +159,7 @@
     </main>
 
     <footer>
-        <div class="roda-pe">
-            <i class="ri-copyright-line">CopyRight 2023</i>
-        </div>
+        <i class="ri-copyright-line">CopyRight 2023</i>
     </footer>
 
     <Script>
