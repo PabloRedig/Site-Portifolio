@@ -24,6 +24,7 @@
                 <ul class="Nav-Menu-Hide">
                     <li><a href="#Sobre" class="Btn">Sobre</a></li>
                     <li><a href="#Certificados" class="Btn">Cerfiticados</a></li>
+                    <li><a href="#Cursos" class="Btn">Cursos</a></li>
                     <li><a href="#Projetos" class="Btn">Projetos</a></li>
                     <li><a href="#Skills" class="Btn">Skills</a></li>
                 </ul>
@@ -88,23 +89,68 @@
                 <div class="Bloco-Caixa">
                     <span><b>Certificado de Bacharel</b></span>
                     <img src="Imgs/LogoEstacio.png" alt="Img-Certificado">
-                    <a id="open-modal" class="Botao">Visualizar</a>
+                    <a id="open-Modal-Certificado" class="Botao">Visualizar</a>
                 </div>
             </div>
 
-            <div id="fade" class="hide"></div>
-            <div id="modal" class="hide">
+            <div id="fadeCertificado" class="hide"></div>
+            <div id="modalCertificado" class="hide">
                 <div class="modal-header">
                     <h2>Bacharel em Sistema de informação</h2>
-                    <i id="close-modal" class="ri-close-circle-line"></i>
+                    <i id="close-Modal-Certificado" class="ri-close-circle-line"></i>
                 </div>
                 <div class="modal-body">
                     <img class="Img-Diploma" src="Imgs/DiplomaEstacio.png" alt="Img-Certificado">
                 </div>
             </div>
+        </section>
 
+        <section id="Cursos" class="Bloco Cursos">
+            <div class="divisoria">
+                <span>Cursos</span>
+            </div>
 
+            <div class="Bloco-Info">
+                <div class="Bloco-Caixa">
+                    <span>Certificados HTML</span>
+                    <img class="Img" src="Imgs/LogoAlura.png" alt="Img-Alura">
+                    <a id="openModalCursosHtml" class="Botao">Visualizar</a>
+                </div>
 
+                <div id="fadeCursosHtml" class="hide"></div>
+                <div id="modalCursosHtml" class="hide">
+                    <div class="viewProjeto">
+                        <div class="viewProjetoHeader">
+                            <h1>Certificados HTML</h1>
+                            <i id="closeModalCursosHtml" class="ri-close-circle-line"></i>
+                        </div>
+                        <div class="viewProjetoBody">
+                            <div class="table">
+                                <div class="tableInfo">
+                                    <span>Cursos</span>
+                                    <a class="Botao">Certificado</a>
+                                </div>
+                                <div class="tableInfo">
+                                    <span>Cursos</span>
+
+                                    <a class="Botao">Certificado</a>
+                                </div>
+                                <div class="tableInfo">
+                                    <span>Cursos</span>
+                                    <a class="Botao">Certificado</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="Bloco-Caixa">
+                    <span>Certificados Diversos</span>
+                    <img class="Img" src="Imgs/LogoAlura.png" alt="Img-Alura">
+                    <a class="Botao">Visualizar</a>
+                </div>
+
+            </div>
         </section>
 
         <section id="Projetos" class="Bloco Projetos">
@@ -116,8 +162,36 @@
                     <img src="Imgs/LogoAgroRural.png" alt="Img-Projeto">
                     <div class="Botoes">
                         <a class="Botao" href="https://github.com/tccwebrural/agrorural-web" target="_blank">GitHub</a>
-                        <a id="open-modal-Projeto" class="Botao">Sobre</a>
+                        <a id="open-Modal-ProjetoAgroRural" class="Botao">Sobre</a>
                     </div>
+
+                    <div id="fadeProjetoAgroRural" class="hide"></div>
+                    <div id="modalProjetoAgroRural" class="hide">
+                        <div class="viewProjeto">
+                            <div class="viewProjetoHeader">
+                                <h1>Agro Rural</h1>
+                                <i id="close-Modal-ProjetoAgroRural" class="ri-close-circle-line"></i>
+                            </div>
+                            <div class="viewProjetoBody">
+
+                             
+                                    <p>
+                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                        Vel fugiat quas dolorem hic ad libero, ipsam nihil labore
+                                        fugit porro totam beatae nostrum alias. Voluptas obcaecati
+                                        reiciendis architecto sequi. Enim.
+                                    </p>
+                                
+                                <div class="carrosel">
+                                    <img src="Imgs/LogoAgroRural.png" alt="SiteAgroRural">
+                                </div>
+                            </div>
+                            <div class="viewProjetofooter">
+                                <i class="ri-copyright-line">CopyRight 2023</i>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
                 <div class="Bloco-Caixa">
@@ -154,15 +228,17 @@
                     <img class="Img " src="Imgs/LogoReact.png" alt="Img-Skills">
                     <span>React - Basico</span>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer>
-        <i class="ri-copyright-line">CopyRight 2023</i>
+        <i class="ri-copyright-line">CopyRight 2022</i>
     </footer>
 
     <Script>
+        //Nav Bar 
         var navHide = document.getElementById("Nav-Hide");
         var menuicon = document.getElementById("menu-icon");
 
@@ -170,19 +246,54 @@
             navHide.classList.toggle("open");
         }
 
-        const openModalButton = document.querySelector("#open-modal");
-        const closeModalButton = document.querySelector("#close-modal");
-        const modal = document.querySelector("#modal");
-        const fade = document.querySelector("#fade");
+        //Modal Certificado
 
-        const toggleModal = () => {
-            modal.classList.toggle("hide");
-            fade.classList.toggle("hide");
+        const openModalCertificado = document.querySelector("#open-Modal-Certificado");
+        const closeModalCertificado = document.querySelector("#close-Modal-Certificado");
+        const modalCertificado = document.querySelector("#modalCertificado");
+        const fadeCertificado = document.querySelector("#fadeCertificado");
+
+        const toggleModalCertificado = () => {
+            modalCertificado.classList.toggle("hide");
+            fadeCertificado.classList.toggle("hide");
         };
 
-        [openModalButton, closeModalButton, fade].forEach((el) => {
-            el.addEventListener("click", () => toggleModal());
+        [openModalCertificado, closeModalCertificado, fadeCertificado].forEach((el) => {
+            el.addEventListener("click", () => toggleModalCertificado());
         })
+
+        //Modal View Projetos
+
+        const openModalProjetoAgroRural = document.querySelector("#open-Modal-ProjetoAgroRural");
+        const closeModalProjetoAgroRural = document.querySelector("#close-Modal-ProjetoAgroRural");
+        const modalProjetoAgroRural = document.querySelector("#modalProjetoAgroRural");
+        const fadeProjetoAgroRuralo = document.querySelector("#fadeProjetoAgroRural");
+
+        const toggleModalProjetoAgroRural = () => {
+            modalProjetoAgroRural.classList.toggle("hide");
+            fadeProjetoAgroRural.classList.toggle("hide");
+        };
+
+        [openModalProjetoAgroRural, closeModalProjetoAgroRural, fadeProjetoAgroRural].forEach((el) => {
+            el.addEventListener("click", () => toggleModalProjetoAgroRural());
+        })
+
+        //Modal Cursos Certificados       
+
+        const openModalCursosHtml = document.querySelector("#openModalCursosHtml");
+        const closeModalCursosHtml = document.querySelector("#closeModalCursosHtml");
+        const modalCursosHtml = document.querySelector("#modalCursosHtml");
+        const fadeCursosHtml = document.querySelector("#fadeCursosHtml");
+
+        const toggleModalCursosHtml = () => {
+            modalCursosHtml.classList.toggle("hide");
+            fadeCursosHtml.classList.toggle("hide");
+        };
+
+        [openModalCursosHtml, closeModalCursosHtml, fadeCursosHtml].forEach((el) => {
+            el.addEventListener("click", () => toggleModalCursosHtml());
+        })
+
     </Script>
 
 

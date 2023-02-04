@@ -24,7 +24,7 @@ body{
     font-family: 'Libre Baskerville', serif;
 }
 
-/*************************/
+
 /* Cabeçalho */
 
 header{
@@ -131,27 +131,40 @@ main{
     font-size: 20px;
     font-weight: 600;
 }
+
 .Bloco-Info{
     display: flex;
+    flex-direction: row;
     margin: auto;
     gap: 20px;
     flex-wrap: wrap;
 }
 
 .Botao{
-    text-align: center;
-    padding: 5px;
-    border-radius: .49rem;
-    border: none;
-    color: white;
+    max-width: 100px;
+    padding: .50rem;    
+    border-radius: .50rem;
+    font-size: 1rem;
+    align-self: center;
+
     cursor: pointer;
-    background-color: var(--Color-Principal);
+    color: #fff;
+    
+    border: #293b5d solid .10rem;
+    background-color:#293b5d ;
+}
+
+.Botao:hover{
+    transition: all .50s ease;
+    color: black;
+    background-color: rgb(255, 255, 255);
 }
 
 h1, h3{
     color: var(--Color-Principal);
     font-weight: 600;
 }
+
 
 /* Home */
 
@@ -199,6 +212,7 @@ h1, h3{
     margin: 10px 0;
 }
 
+
 /* Sobre */
 
 .BlocoSobre{    
@@ -213,12 +227,51 @@ h1, h3{
     background-color: var(--Color-Blocos);
 }
 
-/*Certificados*/
-/*Modal*/
+
+/* Certificados */
 
 
+/* Cursos */
 
-#close-modal{
+
+/* Projetos */
+.Botoes{
+    display: flex;
+    justify-content: center;
+    gap: .60rem;
+}
+
+
+/*Skills*/
+
+.Img{
+    max-width: 150px;    
+    max-height: 150px;
+    align-self: center;
+}
+
+.Skills span{
+    align-self: center;
+}
+
+
+/* Roda Pé */
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4vh;  
+    color: white;
+    background-color: var(--Color-Principal);
+}
+
+
+/* MODAIS */
+/* Certificados */
+
+#close-Modal-Certificado{
     padding: .6rem 1.2rem;
     background-color: var(--Color-Principal);
     color: #fff;
@@ -229,14 +282,7 @@ h1, h3{
     font-size: 1rem;
 }
 
-#fade, 
-#modal{
-    transition: .4s;
-    opacity: 1;
-    pointer-events: all;
-}
-
-#fade{
+#fadeCertificado{
     position:fixed;
     top:0;
     left: 0;
@@ -244,9 +290,12 @@ h1, h3{
     height: 100%;
     background-color: rgba(0,0,0,0.6);
     z-index: 5;
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
 }
 
-#modal{
+#modalCertificado{
     position: fixed;
     left: 50%;
     top: 50%;
@@ -256,6 +305,15 @@ h1, h3{
     max-width: 90%;
     padding: 1.2rem;
     border-radius: .5rem;
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
+    margin-top: 1rem;
+}
+
+#modalCertificado.hide, #fadeCertificado.hide{
+    opacity: 0;
+    pointer-events: none;
 }
 
 .modal-header{
@@ -272,48 +330,177 @@ h1, h3{
 }
 
 .Img-Diploma{
-    width: 600px;
+    width: 700px;
 }
 
-#modal.hide,
-#fade.hide{
+/* Cursos HTML */
+#closeModalCursosHtml{
+    padding: .6rem 1.2rem;
+    background-color: var(--Color-Principal);
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+}
+
+#fadeCursosHtml{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modalCursosHtml{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:  #fff;
+    z-index: 10;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modalCursosHtml.hide, #fadeCursosHtml.hide{
     opacity: 0;
     pointer-events: none;
 }
-/*Modal*/
 
-/* Projetos */
-
-.Botoes{
+.table{
+    width: 80%;
+    margin: 5% auto;
     display: flex;
-    justify-content: center;
-    gap: 15px;
+    flex-direction: column;
+    gap: 20px;
+    
 }
 
-/*Skills*/
-
-.Img{
-    max-width: 150px;    
-    max-height: 150px;
-    align-self: center;
-}
-
-.Skills span{
-    align-self: center;
-}
-
-/* Roda Pé */
-
-footer{
+.tableInfo{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
-    height: 4vh;  
-    color: white;
+    padding: .50rem;
+    border-radius: .49rem;
+    color: white;    
     background-color: var(--Color-Principal);
 }
 
+/*  Projetos */
+#close-Modal-ProjetoAgroRural{
+    padding: .6rem 1.2rem;
+    background-color: var(--Color-Principal);
+    color: #fff;
+    border: none;
+    border-radius: .25rem;
+    cursor: pointer;
+    opacity: .9;
+    font-size: 1rem;
+}
+
+#fadeProjetoAgroRural{
+    position:fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
+    z-index: 5;
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modalProjetoAgroRural{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background-color:  #fff;
+    z-index: 10;
+    max-width: 90%;
+    padding: 1.2rem;
+    border-radius: .5rem;
+    transition: .4s;
+    opacity: 1;
+    pointer-events: all;
+}
+
+#modalProjetoAgroRural.hide, 
+#fadeProjetoAgroRural.hide{
+    opacity: 0;
+    pointer-events: none;
+}
+
+.viewProjeto{
+    width: 70vw;
+    margin: auto;
+    height: 30rem;
+    position: relative;
+    display: flex;
+}
+
+.viewProjetoHeader{
+    width: 100%;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 0;
+    border-bottom: 1px solid #888;
+    display: flex;
+    justify-content: space-between;
+}
+
+.viewProjetoBody{
+    width: 80%;
+    height: 75%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;   
+    align-items: center;
+    position: relative;
+}
+
+
+.carrosel{
+    position: absolute;
+    left: 30px;
+    right: 30px;
+    bottom: 10px;  
+    display: flex;
+    align-items: center;   
+    border: #888 solid .10rem;
+    border-radius: .50rem;
+}
+
+.carrosel img{
+    width: 90%;  
+    margin: auto;
+      
+}
+
+
+.viewProjetofooter{
+    width: 100%;
+    padding-top: 10px;
+    border-top: 1px solid #888;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;   
+    
+}
 
 
 /* Reponsividade */
@@ -356,6 +543,7 @@ footer{
     .Nav-Hide.open{
         right: 0px;
     }
+   
 
     /* Header */
 /*************************/
@@ -399,8 +587,4 @@ footer{
     .Img-Diploma{
         width: 300px;
     }
-    
-
-    /* Certificados */
-/*************************/   
 }
