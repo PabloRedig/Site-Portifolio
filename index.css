@@ -24,9 +24,7 @@ body{
     font-family: 'Libre Baskerville', serif;
 }
 
-
 /* Cabeçalho */
-
 header{
     width: 100%;
     height: 8vh;
@@ -50,7 +48,7 @@ nav{
 }
 
 .Nav-Hide{
-    display: flex;
+    display: flex;    
 }
 
 .Nav-Menu-Hide{
@@ -59,10 +57,15 @@ nav{
     align-items: center;
 }
 
-.Btn {
+.Btn{
     font-size: 20px;
     cursor: pointer;
     color: white;
+    padding: .30rem;
+}
+
+.Btn:hover{
+    border-bottom: var(--Color-Secundaria) 2px solid;
 }
 
 .ri-align-justify{
@@ -70,11 +73,9 @@ nav{
 }
 
 
-
 /*Global Corpo*/
 main{
-    max-width: 80vw;
-    height: auto;
+    max-width: 80vw;    
     margin: auto;
     margin-top: 8vh;
     padding: 2px 5px ;
@@ -83,7 +84,7 @@ main{
 .Bloco{
     width: 100%;
     height: auto;
-    margin: 5% 0;
+    margin: 1% 0;
     display: flex;
     flex-direction: column;
 }
@@ -96,18 +97,16 @@ main{
     margin-top: 3%;
     margin-bottom: 5%;
     display: flex;
-    align-items: center;
-    color: black;
+    align-items: center;    
     background-color: var(--Color-Principal);
 }
 
 .divisoria span {
     padding: 5px;
     margin-left: 5%;
-    font-size: 25px;
-    font-weight: 600;
+    font-size: 1.5rem;
+    font-weight: 700;
     color: var(--Color-Principal);
-    font-weight: 600;
     background-color: var(--Color-Secundaria);
 }
 
@@ -120,15 +119,17 @@ main{
     width: 250px;
     height: 200px;
     padding: 10px;
+    margin-bottom: 2rem;
     
-    border-radius: .49rem;
+    border-radius: .50rem;
     box-shadow: 2px 2px 2px 1px #888;
     background-color: var(--Color-Blocos);
+
 }
 
 .Bloco-Caixa span{
     color: var(--Color-Principal);    
-    font-size: 20px;
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
@@ -136,7 +137,7 @@ main{
     display: flex;
     flex-direction: row;
     margin: auto;
-    gap: 20px;
+    gap: 1.3rem;
     flex-wrap: wrap;
 }
 
@@ -151,7 +152,7 @@ main{
     color: #fff;
     
     border: #293b5d solid .10rem;
-    background-color:#293b5d ;
+    background-color:#293b5d;
 }
 
 .Botao:hover{
@@ -183,20 +184,21 @@ h1, h3{
 .Text-Pablo{
     width: 40%;
     margin: auto;
-    padding: 10px;
+    padding: .80rem;
     border-radius: .49rem;
     background-color: var(--Color-Blocos);
 }
 
 .Contatos{
-    font-size: 25px;
+    font-size: 2rem;    
+    gap: 1rem;
     display: flex;
-    gap: 10px;
     justify-content: center;
 }
 
 .Contatos a{
     color: black;
+    display: flex;
 }
 
 .Contatos i:hover{
@@ -205,25 +207,29 @@ h1, h3{
     color: white;
     cursor: pointer;
     background-color: var(--Color-Principal);
-
 }
 
 .Text-Pablo p{
-    margin: 10px 0;
+    margin: .80rem 0;
 }
 
 
 /* Sobre */
+.Sobre{
+    padding-bottom: 1.5rem;
+}
 
 .BlocoSobre{    
     max-width: 80%;
     height: auto;
-    margin: 20px auto;    
-    padding: 10px;
+    margin: .50rem auto;    
+    padding: .50rem;    
+    gap: .30rem;
+    border-radius: .49rem;
+
     display: flex;
     flex-direction: column;
-    gap: 5px;
-    border-radius: .49rem;
+
     background-color: var(--Color-Blocos);
 }
 
@@ -523,7 +529,7 @@ footer{
     .Nav-Hide{
         display: flex;
         width: 150px;
-        height: 180px;
+        height: 200px;
         position: fixed;
         right: -150px; /*está - para ficar escondido*/
         top: 8vh;
