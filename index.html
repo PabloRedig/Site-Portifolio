@@ -7,10 +7,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
-    <script src="js/scripts.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Libre+Baskerville&display=swap"
+        rel="stylesheet">
+
     <title>Portifolio</title>
 </head>
 
@@ -119,35 +119,74 @@
 
                 <div id="fadeCursosHtml" class="hide"></div>
                 <div id="modalCursosHtml" class="hide">
-                    <div class="viewProjeto">
-                        <div class="viewProjetoHeader">
+
+                    <div class="viewCursos">
+                        <div class="viewCursosHeader">
                             <h1>Certificados HTML</h1>
                             <i id="closeModalCursosHtml" class="ri-close-circle-line"></i>
                         </div>
-                        <div class="viewProjetoBody">
+
+                        <div class="viewCursosBody">
                             <div class="table">
+
                                 <div class="tableInfo">
                                     <span>Cursos</span>
                                     <a class="Botao">Certificado</a>
                                 </div>
+
                                 <div class="tableInfo">
                                     <span>Cursos</span>
 
                                     <a class="Botao">Certificado</a>
                                 </div>
+
                                 <div class="tableInfo">
                                     <span>Cursos</span>
                                     <a class="Botao">Certificado</a>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
 
                 <div class="Bloco-Caixa">
                     <span>Certificados Diversos</span>
                     <img class="Img" src="Imgs/LogoAlura.png" alt="Img-Alura">
-                    <a class="Botao">Visualizar</a>
+                    <a id="openModalCursosDiversos" class="Botao">Visualizar</a>
+                </div>
+
+                <div id="fadeCursosDiversos" class="hide"></div>
+                <div id="modalCursosDiversos" class="hide">
+
+                    <div class="viewCursos">
+                        <div class="viewCursosHeader">
+                            <h1>Certificados Diversos</h1>
+                            <i id="closeModalCursosDiversos" class="ri-close-circle-line"></i>
+                        </div>
+
+                        <div class="viewCursosBody">
+                            <div class="table">
+
+                                <div class="tableInfo">
+                                    <span>Cursos</span>
+                                    <a class="Botao">Certificado</a>
+                                </div>
+
+                                <div class="tableInfo">
+                                    <span>Cursos</span>
+
+                                    <a class="Botao">Certificado</a>
+                                </div>
+
+                                <div class="tableInfo">
+                                    <span>Cursos</span>
+                                    <a class="Botao">Certificado</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
 
             </div>
@@ -157,51 +196,80 @@
             <div class="divisoria"><span>Projetos</span></div>
 
             <div class="Bloco-Info">
-                <div class="Bloco-Caixa">
-                    <span><b>Projeto Agro Rural</b></span>
-                    <img src="Imgs/LogoAgroRural.png" alt="Img-Projeto">
-                    <div class="Botoes">
-                        <a class="Botao" href="https://github.com/tccwebrural/agrorural-web" target="_blank">GitHub</a>
-                        <a id="open-Modal-ProjetoAgroRural" class="Botao">Sobre</a>
+
+                <div class="blocoCaixaProjeto">
+
+                    <img src="Imgs/Projeto PORTIFOLIO.png" alt="LogoAgroRural">
+
+                    <div class="infoProjetos">
+                        <h2>Skills</h2>
+                        <div class="skillsUsadas">
+                            <div class="html">
+                                <span>HMTL 5</span>
+                            </div>
+                            <div class="css">
+                                <span>CSS 3</span>
+                            </div>
+                            <div class="javaScript">
+                                <span>JAVA SCRIPT</span>
+                            </div>
+                        </div>
+
+                        <h2>Sobre o Portifolio</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Beatae soluta vitae possimus. Delectus autem voluptatum
+                            tempore debitis similique, ratione non veritatis totam,
+                            nam ex accusamus culpa distinctio nulla deserunt iste?
+                        </p>
+                        <div class="botoesProjeto">
+                            <a class="botaoProjeto" href="https://github.com/tccwebrural/agrorural-web" target="_blank">
+                                GitHub </a>
+                            <a class="botaoProjeto" href=""> Visitar Site </a>
+                        </div>
                     </div>
+                </div>
 
-                    <div id="fadeProjetoAgroRural" class="hide"></div>
-                    <div id="modalProjetoAgroRural" class="hide">
-                        <div class="viewProjeto">
-                            <div class="viewProjetoHeader">
-                                <h1>Agro Rural</h1>
-                                <i id="close-Modal-ProjetoAgroRural" class="ri-close-circle-line"></i>
-                            </div>
-                            <div class="viewProjetoBody">
+                <div class="blocoCaixaProjeto">
 
-                             
-                                    <p>
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                        Vel fugiat quas dolorem hic ad libero, ipsam nihil labore
-                                        fugit porro totam beatae nostrum alias. Voluptas obcaecati
-                                        reiciendis architecto sequi. Enim.
-                                    </p>
-                                
-                                <div class="carrosel">
-                                    <img src="Imgs/LogoAgroRural.png" alt="SiteAgroRural">
-                                </div>
-                            </div>
-                            <div class="viewProjetofooter">
-                                <i class="ri-copyright-line">CopyRight 2023</i>
-                            </div>
+                    <img src="Imgs/emDesenvolvimento.png" alt="Em desenvolvimento">
+
+
+                    <div class="emDesenvolvimento">
+                        <div class="atencao">
+                            <span>Em Desenvolvimento</span>
                         </div>
                     </div>
 
-                </div>
+                    <div class="infoProjetos">
+                        <h2>Skills</h2>
+                        <div class="skillsUsadas">
+                            <div class="html">
+                                <span>HMTL 5</span>
+                            </div>
+                            <div class="css">
+                                <span>CSS 3</span>
+                            </div>
+                            <div class="javaScript">
+                                <span>JAVA SCRIPT</span>
+                            </div>
+                        </div>
 
-                <div class="Bloco-Caixa">
-                    <span><b>Projeto Portifolio</b></span>
-                    <img src="Imgs/logoPortifolio.png" alt="Img-Projeto">
-                    <div class="Botoes">
-                        <a class="Botao" href="https://github.com/PabloRedig/site-Portifolio" target="_blank">GitHub</a>
-                        <a class="Botao">Sobre</a>
+                        <h2>Sobre o Portifolio</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Beatae soluta vitae possimus. Delectus autem voluptatum
+                            tempore debitis similique, ratione non veritatis totam,
+                            nam ex accusamus culpa distinctio nulla deserunt iste?
+                        </p>
+                        <div class="botoesProjeto">
+                            <a class="botaoProjeto" href="https://github.com/PabloRedig/site-Portifolio"
+                                target="_blank"> GitHub </a>
+                            <a class="botaoProjeto" href=""> Visitar Site </a>
+                        </div>
                     </div>
                 </div>
+
             </div>
         </section>
 
@@ -237,7 +305,7 @@
         <i class="ri-copyright-line">CopyRight 2022</i>
     </footer>
 
-    <Script>
+    <script>
         //Nav Bar 
         var navHide = document.getElementById("Nav-Hide");
         var menuicon = document.getElementById("menu-icon");
@@ -262,23 +330,7 @@
             el.addEventListener("click", () => toggleModalCertificado());
         })
 
-        //Modal View Projetos
-
-        const openModalProjetoAgroRural = document.querySelector("#open-Modal-ProjetoAgroRural");
-        const closeModalProjetoAgroRural = document.querySelector("#close-Modal-ProjetoAgroRural");
-        const modalProjetoAgroRural = document.querySelector("#modalProjetoAgroRural");
-        const fadeProjetoAgroRuralo = document.querySelector("#fadeProjetoAgroRural");
-
-        const toggleModalProjetoAgroRural = () => {
-            modalProjetoAgroRural.classList.toggle("hide");
-            fadeProjetoAgroRural.classList.toggle("hide");
-        };
-
-        [openModalProjetoAgroRural, closeModalProjetoAgroRural, fadeProjetoAgroRural].forEach((el) => {
-            el.addEventListener("click", () => toggleModalProjetoAgroRural());
-        })
-
-        //Modal Cursos Certificados       
+        //Modal Cursos Certificados HTML
 
         const openModalCursosHtml = document.querySelector("#openModalCursosHtml");
         const closeModalCursosHtml = document.querySelector("#closeModalCursosHtml");
@@ -294,9 +346,25 @@
             el.addEventListener("click", () => toggleModalCursosHtml());
         })
 
-    </Script>
+        //Modal Cursos Certificados HTML
 
+        const openModalCursosDiversos = document.querySelector("#openModalCursosDiversos");
+        const closeModalCursosDiversos = document.querySelector("#closeModalCursosDiversos");
+        const modalCursosDiversos = document.querySelector("#modalCursosDiversos");
+        const fadeCursosDiversos = document.querySelector("#fadeCursosDiversos");
+
+        const toggleModalCursosDiversos = () => {
+            modalCursosDiversos.classList.toggle("hide");
+            fadeCursosDiversos.classList.toggle("hide");
+        };
+
+        [openModalCursosDiversos, closeModalCursosDiversos, fadeCursosDiversos].forEach((el) => {
+            el.addEventListener("click", () => toggleModalCursosDiversos());
+        })
+
+    </script>
 
 </body>
+
 
 </html>
