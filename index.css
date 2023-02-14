@@ -476,11 +476,14 @@ footer{
     background-color:  #fff;
     z-index: 10;
     max-width: 90%;
+    height: 70%;
     padding: 1.2rem;
     border-radius: .5rem;
     transition: .4s;
     opacity: 1;
     pointer-events: all;
+    
+   
 }
 
 #modalCursosHtml.hide, #fadeCursosHtml.hide{
@@ -659,10 +662,13 @@ footer{
     }
 
     /* Projetos */
+
+    
     .blocoCaixaProjeto{
         flex-direction: column;
         gap: 1rem;
     }
+
     .blocoCaixaProjeto img{
         width: 100%;
     }
@@ -671,7 +677,7 @@ footer{
         font-size: .80rem;
         margin: .40rem  0;
         padding: .40rem;
-            } 
+    } 
     
     .css{
         font-size: .80rem;
