@@ -595,10 +595,10 @@ footer{
 
     .Nav-Hide{
         display: flex;
-        width: 150px;
+        width: 210px;
         height: 200px;
         position: fixed;
-        right: -150px; /*está - para ficar escondido*/
+        right: -210px; /*está - para ficar escondido*/
         top: 8vh;
         border-radius:  0  0  0 .5rem;
         transition: all .50s ease;
